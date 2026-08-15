@@ -1,6 +1,15 @@
 #include <iostream>
 #include <string>
 
+
+void displayLoginStatus(bool loggedIn)
+{
+    if (loggedIn)
+        std::cout << "Login status: ACTIVE\n";
+    else
+        std::cout << "Login status: INACTIVE\n";
+}
+
 bool authenticateUser(const std::string& username,
                       const std::string& password)
 {
