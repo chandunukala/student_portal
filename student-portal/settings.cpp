@@ -40,6 +40,22 @@ void setLanguage(StudentSettings& settings, const std::string& language)
     }
 }
 
+void displaySettingsSummary(const StudentSettings& settings)
+{
+    std::cout << "\n--- Settings Summary ---\n";
+
+    std::cout << "Notifications: "
+              << (settings.notificationsEnabled ? "Enabled" : "Disabled")
+              << '\n';
+
+    std::cout << "Dark Mode: "
+              << (settings.darkModeEnabled ? "Enabled" : "Disabled")
+              << '\n';
+
+    std::cout << "Language: "
+              << settings.language << '\n';
+}
+
 int main()
 {
     StudentSettings settings{
@@ -65,6 +81,8 @@ setLanguage(settings, "English");
 
 std::cout << "\nAfter language preference change:\n";
 displaySettings(settings);
+
+displaySettingsSummary(settings);
 
     return 0;
 }
