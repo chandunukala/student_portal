@@ -56,6 +56,14 @@ void displaySettingsSummary(const StudentSettings& settings)
               << settings.language << '\n';
 }
 
+
+void resetSettings(StudentSettings& settings)
+{
+    settings.notificationsEnabled = false;
+    settings.darkModeEnabled = false;
+    settings.language = "English";
+}
+
 int main()
 {
     StudentSettings settings{
