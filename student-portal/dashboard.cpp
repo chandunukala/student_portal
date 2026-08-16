@@ -6,6 +6,7 @@ struct Dashboard
     std::string studentName;
     int courses;
     int completedCourses;
+    double attendancePercentage;
 };
 
 double calculateCompletionPercentage(const Dashboard& dashboard)
@@ -26,12 +27,20 @@ void displayDashboard(const Dashboard& dashboard)
               << dashboard.completedCourses << '\n';
 }
 
+void displayAttendance(const Dashboard& dashboard)
+{
+    std::cout << "Attendance: "
+              << dashboard.attendancePercentage
+              << "%\n";
+}
+
 int main()
 {
     Dashboard dashboard{
-        "Student",
-        5,
-        3
+    "Student",
+    5,
+    3,
+    87.5
     };
 
     displayDashboard(dashboard);
@@ -40,6 +49,8 @@ int main()
 
     std::cout << "Course Completion: "
           << progress << "%\n";
+
+    displayAttendance(dashboard);
 
     return 0;
 }
