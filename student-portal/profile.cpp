@@ -21,6 +21,7 @@ void updateProfile(StudentProfile& student,
     student.age = newAge;
 }
 
+
 void displayProfile(const StudentProfile& student)
 {
     std::cout << "Name: " << student.name << '\n';
@@ -35,6 +36,14 @@ void displayProfileSummary(const StudentProfile& student)
     std::cout << "Student: " << student.name << '\n';
     std::cout << "Contact: " << student.email << '\n';
     std::cout << "Age: " << student.age << '\n';
+}
+
+void updateEmail(StudentProfile& student, const std::string& newEmail)
+{
+    if (!newEmail.empty())
+    {
+        student.email = newEmail;
+    }
 }
 
 int main(){
@@ -58,5 +67,11 @@ updateProfile(student, "updated@example.com", 23);
 
 std::cout << "\nUpdated Profile:\n";
 displayProfile(student);
+
+updateEmail(student, "contact@studentportal.com");
+
+std::cout << "\nUpdated Contact:\n";
+displayProfileSummary(student);
+
     return 0;
 }
