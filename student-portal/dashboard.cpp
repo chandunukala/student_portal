@@ -7,6 +7,7 @@ struct Dashboard
     int courses;
     int completedCourses;
     double attendancePercentage;
+    double averageGrade;
 };
 
 double calculateCompletionPercentage(const Dashboard& dashboard)
@@ -34,14 +35,22 @@ void displayAttendance(const Dashboard& dashboard)
               << "%\n";
 }
 
+void displayAcademicPerformance(const Dashboard& dashboard)
+{
+    std::cout << "Average Grade: "
+              << dashboard.averageGrade
+              << "%\n";
+}
+
 int main()
 {
     Dashboard dashboard{
     "Student",
     5,
     3,
-    87.5
-    };
+    87.5,
+    82.4
+};
 
     displayDashboard(dashboard);
 
@@ -51,6 +60,8 @@ int main()
           << progress << "%\n";
 
     displayAttendance(dashboard);
+
+    displayAcademicPerformance(dashboard);
 
     return 0;
 }
