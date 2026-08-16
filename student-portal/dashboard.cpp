@@ -42,6 +42,19 @@ void displayAcademicPerformance(const Dashboard& dashboard)
               << "%\n";
 }
 
+void displayDashboardSummary(const Dashboard& dashboard)
+{
+    double progress = calculateCompletionPercentage(dashboard);
+
+    std::cout << "\n--- Dashboard Summary ---\n";
+    std::cout << "Student: " << dashboard.studentName << '\n';
+    std::cout << "Course Progress: " << progress << "%\n";
+    std::cout << "Attendance: "
+              << dashboard.attendancePercentage << "%\n";
+    std::cout << "Average Grade: "
+              << dashboard.averageGrade << "%\n";
+}
+
 int main()
 {
     Dashboard dashboard{
@@ -62,6 +75,8 @@ int main()
     displayAttendance(dashboard);
 
     displayAcademicPerformance(dashboard);
+
+    displayDashboardSummary(dashboard);
 
     return 0;
 }
