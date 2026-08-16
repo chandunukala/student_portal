@@ -32,7 +32,7 @@ void displayProfile(const StudentProfile& student)
 
 void displayProfileSummary(const StudentProfile& student)
 {
-    std::cout << "\n--- Profile Summary ---\n";
+   std:: cout << "Student Academic Profile" << '\n';
     std::cout << "Student: " << student.name << '\n';
     std::cout << "Contact: " << student.email << '\n';
     std::cout << "Age: " << student.age << '\n';
