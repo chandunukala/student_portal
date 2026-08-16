@@ -32,3 +32,13 @@ Run the program using:
 - Dashboard information display
 - Student settings and preferences
 - Profile conflict handling through Git merges
+
+
+
+## Git Workflow
+
+The project was developed using multiple Git branches for separate features,
+experiments, conflict resolution, and recovery scenarios.
+
+Changes were integrated using regular Git merges, with merge conflicts
+resolved manually when required.
