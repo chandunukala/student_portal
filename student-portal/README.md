@@ -8,3 +8,6 @@ A simple C++ project for practicing Git and GitHub workflows.
 - A C++ compiler such as g++
 - Visual Studio Code or another C++ editor
 
+## Version Information
+
+The current project version is 1.0.
