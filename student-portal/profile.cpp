@@ -28,6 +28,15 @@ void displayProfile(const StudentProfile& student)
     std::cout << "Age: " << student.age << '\n';
 }
 
+
+void displayProfileSummary(const StudentProfile& student)
+{
+    std::cout << "\n--- Profile Summary ---\n";
+    std::cout << "Student: " << student.name << '\n';
+    std::cout << "Contact: " << student.email << '\n';
+    std::cout << "Age: " << student.age << '\n';
+}
+
 int main(){
     StudentProfile student{
         "Student",
@@ -38,10 +47,12 @@ int main(){
    if (isValidProfile(student)){
     std::cout << "\nProfile is valid.\n";
     }
-  else
-  {
+  else {
     std::cout << "\nProfile contains invalid data.\n";
  }
+
+
+ displayProfileSummary(student);
 
 updateProfile(student, "updated@example.com", 23);
 
