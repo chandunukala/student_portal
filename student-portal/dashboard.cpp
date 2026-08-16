@@ -8,6 +8,15 @@ struct Dashboard
     int completedCourses;
 };
 
+double calculateCompletionPercentage(const Dashboard& dashboard)
+{
+    if (dashboard.courses == 0)
+        return 0.0;
+
+    return (static_cast<double>(dashboard.completedCourses)
+            / dashboard.courses) * 100.0;
+}
+
 void displayDashboard(const Dashboard& dashboard)
 {
     std::cout << "\n--- Student Dashboard ---\n";
@@ -26,6 +35,11 @@ int main()
     };
 
     displayDashboard(dashboard);
+
+    double progress = calculateCompletionPercentage(dashboard);
+
+    std::cout << "Course Completion: "
+          << progress << "%\n";
 
     return 0;
 }
