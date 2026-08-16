@@ -7,7 +7,12 @@ struct StudentProfile
     std::string email;
     int age;
 };
-
+bool isValidProfile(const StudentProfile& student)
+{
+    return !student.name.empty() &&
+           !student.email.empty() &&
+           student.age > 0;
+}
 void updateProfile(StudentProfile& student,
                    const std::string& newEmail,
                    int newAge)
@@ -23,15 +28,20 @@ void displayProfile(const StudentProfile& student)
     std::cout << "Age: " << student.age << '\n';
 }
 
-int main()
-{
+int main(){
     StudentProfile student{
         "Student",
         "student@example.com",
         22
     };
 
-   
+   if (isValidProfile(student)){
+    std::cout << "\nProfile is valid.\n";
+    }
+  else
+  {
+    std::cout << "\nProfile contains invalid data.\n";
+ }
 
 updateProfile(student, "updated@example.com", 23);
 
