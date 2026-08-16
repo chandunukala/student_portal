@@ -8,6 +8,11 @@ struct StudentSettings
     std::string language;
 };
 
+void setNotifications(StudentSettings& settings, bool enabled)
+{
+    settings.notificationsEnabled = enabled;
+}
+
 void displaySettings(const StudentSettings& settings)
 {
     std::cout << "\n--- Student Settings ---\n";
@@ -31,6 +36,11 @@ int main()
     };
 
     displaySettings(settings);
+
+    setNotifications(settings, false);
+
+std::cout << "\nAfter notification preference change:\n";
+displaySettings(settings);
 
     return 0;
 }
