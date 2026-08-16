@@ -8,6 +8,14 @@ struct StudentProfile
     int age;
 };
 
+void updateProfile(StudentProfile& student,
+                   const std::string& newEmail,
+                   int newAge)
+{
+    student.email = newEmail;
+    student.age = newAge;
+}
+
 void displayProfile(const StudentProfile& student)
 {
     std::cout << "Name: " << student.name << '\n';
@@ -23,7 +31,11 @@ int main()
         22
     };
 
-    displayProfile(student);
+   
 
+updateProfile(student, "updated@example.com", 23);
+
+std::cout << "\nUpdated Profile:\n";
+displayProfile(student);
     return 0;
 }
