@@ -32,8 +32,13 @@ void displayProfile(const StudentProfile& student)
 
 void displayProfileSummary(const StudentProfile& student)
 {
+<<<<<<< HEAD
     std::cout << "Student Personal Profile" <<'\n';
      std::cout << "Student: " << student.name << '\n';
+=======
+   std:: cout << "Student Academic Profile" << '\n';
+    std::cout << "Student: " << student.name << '\n';
+>>>>>>> conflict-profile
     std::cout << "Contact: " << student.email << '\n';
     std::cout << "Age: " << student.age << '\n';
 }
