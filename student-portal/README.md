@@ -22,3 +22,13 @@ g++ main.cpp student_info.cpp profile.cpp dashboard.cpp settings.cpp login.cpp -
 Run the program using:
 
 ./student_portal
+
+
+
+## Project Features
+
+- Student login and authentication
+- Student profile management
+- Dashboard information display
+- Student settings and preferences
+- Profile conflict handling through Git merges
