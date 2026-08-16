@@ -32,6 +32,14 @@ void displaySettings(const StudentSettings& settings)
     std::cout << "Language: " << settings.language << '\n';
 }
 
+void setLanguage(StudentSettings& settings, const std::string& language)
+{
+    if (!language.empty())
+    {
+        settings.language = language;
+    }
+}
+
 int main()
 {
     StudentSettings settings{
@@ -50,6 +58,12 @@ displaySettings(settings);
 setDarkMode(settings, true);
 
 std::cout << "\nAfter dark mode preference change:\n";
+displaySettings(settings);
+
+
+setLanguage(settings, "English");
+
+std::cout << "\nAfter language preference change:\n";
 displaySettings(settings);
 
     return 0;
