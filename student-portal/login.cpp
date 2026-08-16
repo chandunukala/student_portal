@@ -44,7 +44,7 @@ int main()
         if (authenticateUser(username, password))
         {
             loggedIn = true;
-            std::cout << "Login successful.\n";
+            std::cout << "\"Login successful - Authentication verified\"\n";
             break;
         }
 
